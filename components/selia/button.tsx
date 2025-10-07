@@ -6,7 +6,7 @@ import { cn } from 'lib/utils';
 export const buttonVariants = cva(
   [
     'relative font-semibold inset-shadow-2xs ring-2',
-    'inline-flex items-center gap-2.5 transition-colors',
+    'inline-flex justify-center items-center gap-2.5 transition-colors',
     'after:absolute after:inset-0 after:bg-white/10 after:opacity-0 hover:after:opacity-100 after:transition-opacity',
     'focus:outline-0 focus-visible:outline-2 focus-visible:outline-offset-2',
     'before:size-4.5 before:bg-spinner before:-mr-7 before:opacity-0 before:scale-20 before:transition-[opacity,scale,margin-right]',
@@ -47,20 +47,20 @@ export const buttonVariants = cva(
         ],
       },
       size: {
-        default: 'h-9.5 px-4 rounded',
+        md: 'h-9.5 px-4 rounded',
         icon: 'size-9.5 rounded',
-        xs: 'h-7.5 px-2.5 rounded-lg',
-        'xs-icon': 'size-7.5 rounded-lg',
-        sm: 'h-8.5 px-3 rounded-[10px]',
-        'sm-icon': 'size-8.5 rounded-[10px]',
-        lg: 'h-10.5 px-5 rounded-[14px]',
-        'lg-icon': 'size-10.5 rounded-[14px]',
+        xs: 'h-7.5 px-2.5 rounded-lg after:rounded-lg',
+        'xs-icon': 'size-7.5 rounded-lg after:rounded-lg',
+        sm: 'h-8.5 px-3 rounded-[10px] after:rounded-[10px]',
+        'sm-icon': 'size-8.5 rounded-[10px] after:rounded-[10px]',
+        lg: 'h-10.5 px-5 rounded-[14px] after:rounded-[14px]',
+        'lg-icon': 'size-10.5 rounded-[14px] after:rounded-[14px]',
       },
       pill: {
-        true: 'rounded-full',
+        true: 'rounded-full after:rounded-full',
       },
       block: {
-        true: 'w-full justify-center',
+        true: 'w-full',
       },
       progress: {
         true: [
@@ -78,7 +78,7 @@ export const buttonVariants = cva(
     ],
     defaultVariants: {
       variant: 'primary',
-      size: 'default',
+      size: 'md',
     },
   },
 );

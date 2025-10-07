@@ -2,6 +2,12 @@ import * as React from 'react';
 import { Select as BaseSelect } from '@base-ui-components/react/select';
 import { cn } from 'lib/utils';
 
+export interface SelectItem {
+  value: string;
+  label: React.ReactNode;
+  icon?: React.ReactNode;
+}
+
 export interface SelectProps<
   Value,
   Multiple extends boolean | undefined = false,
@@ -51,10 +57,45 @@ export function SelectTrigger({
   );
 }
 
-export interface SelectValueProps extends BaseSelect.Value.Props {}
+export interface SelectValueProps extends BaseSelect.Value.Props {
+  placeholder?: string;
+}
 
-export function SelectValue({ className, ...props }: SelectValueProps) {
-  return <BaseSelect.Value className={cn('', className)} {...props} />;
+export function SelectValue({
+  className,
+  placeholder = 'Select an option',
+  ...props
+}: SelectValueProps) {
+  return (
+    <BaseSelect.Value className={cn('', className)} {...props}>
+      {(value: string | SelectItem | null) => (
+        <SelectRenderValue value={value} placeholder={placeholder} />
+      )}
+    </BaseSelect.Value>
+  );
+}
+
+function SelectRenderValue({
+  value,
+  placeholder,
+}: {
+  value: string | SelectItem | null;
+  placeholder: string;
+}) {
+  if (!value) {
+    return <span className="text-dim">{placeholder}</span>;
+  }
+
+  if (typeof value === 'object') {
+    return (
+      <div className="flex items-center gap-2.5 [&_svg]:size-4 [&_svg]:text-foreground">
+        {value.icon}
+        <span className="text-foreground">{value.label}</span>
+      </div>
+    );
+  }
+
+  return <span className="text-foreground">{value}</span>;
 }
 
 export interface SelectContentProps {
@@ -124,7 +165,9 @@ export function SelectItem({ className, children, ...props }: SelectItemProps) {
       )}
       {...props}
     >
-      <BaseSelect.ItemText>{children}</BaseSelect.ItemText>
+      <BaseSelect.ItemText className="flex items-center gap-2.5 [&_svg]:size-4">
+        {children}
+      </BaseSelect.ItemText>
       <BaseSelect.ItemIndicator className="ml-auto">
         <svg
           className="h-4 w-4"

@@ -58,7 +58,7 @@ export function CardHeaderContent({
   className,
   ...props
 }: CardHeaderContentProps) {
-  return <div className={cn('flex flex-col gap-1.5', className)} {...props} />;
+  return <div className={cn('flex flex-col gap-2', className)} {...props} />;
 }
 
 export interface CardHeaderActionsProps

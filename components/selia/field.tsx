@@ -16,7 +16,9 @@ export function Field({ className, ...props }: FieldProps) {
 export interface FieldLabelProps extends BaseField.Label.Props {}
 
 export function FieldLabel({ className, ...props }: FieldLabelProps) {
-  return <BaseField.Label className={cn(className)} {...props} />;
+  return (
+    <BaseField.Label className={cn('text-foreground', className)} {...props} />
+  );
 }
 
 export interface FieldDescriptionProps extends BaseField.Description.Props {}
@@ -26,7 +28,10 @@ export function FieldDescription({
   ...props
 }: FieldDescriptionProps) {
   return (
-    <BaseField.Description className={cn('text-muted', className)} {...props} />
+    <BaseField.Description
+      className={cn('text-muted text-sm', className)}
+      {...props}
+    />
   );
 }
 

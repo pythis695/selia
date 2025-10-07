@@ -1,4 +1,5 @@
 import { useRender } from '@base-ui-components/react';
+import { cva } from 'class-variance-authority';
 import { cn } from 'lib/utils';
 
 export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {}
