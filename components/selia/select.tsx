@@ -119,11 +119,11 @@ export function SelectContent({
           positionerProps?.className,
         )}
       >
-        <BaseSelect.ScrollUpArrow />
+        <BaseSelect.ScrollUpArrow className="top-1 left-1 right-1 z-10 absolute rounded h-5 text-xs text-foreground flex items-center justify-around bg-accent04" />
         <BaseSelect.Popup
           {...popupProps}
           className={cn(
-            'group origin-(--transform-origin) bg-popover ring ring-popover-border rounded shadow-lg',
+            'group origin-(--transform-origin) bg-popover ring ring-popover-border rounded shadow',
             'p-1 outline-none',
             popupProps?.className,
           )}
@@ -131,7 +131,7 @@ export function SelectContent({
           <BaseSelect.Arrow />
           {children}
         </BaseSelect.Popup>
-        <BaseSelect.ScrollDownArrow />
+        <BaseSelect.ScrollDownArrow className="bottom-1 left-1 right-1 z-10 absolute rounded h-5 text-xs text-foreground flex items-center justify-around bg-accent04" />
       </BaseSelect.Positioner>
     </BaseSelect.Portal>
   );
@@ -199,7 +199,7 @@ export function SelectGroupLabel({
 }: SelectGroupLabelProps) {
   return (
     <BaseSelect.GroupLabel
-      className={cn('px-2.5 py-1.5 font-medium text-dim', className)}
+      className={cn('px-2.5 py-1.5 text-sm font-medium text-dim', className)}
       {...props}
     />
   );
