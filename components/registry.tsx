@@ -124,6 +124,61 @@ export const registry = {
       },
     ],
   },
+  checkbox: {
+    name: 'Checkbox',
+    examples: [
+      {
+        name: 'Basic',
+        path: 'components/examples/checkbox-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/checkbox-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+      {
+        name: 'Checkbox with Label',
+        path: 'components/examples/checkbox-label-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/checkbox-label-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+      {
+        name: 'Checkbox with Label Alternate',
+        path: 'components/examples/checkbox-label-alt-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/checkbox-label-alt-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+    ],
+  },
+  checkboxGroup: {
+    name: 'Checkbox Group',
+    examples: [
+      {
+        name: 'Basic',
+        path: 'components/examples/checkbox-group-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/checkbox-group-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+      {
+        name: 'Checkbox Group Parent',
+        path: 'components/examples/checkbox-group-parent-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/checkbox-group-parent-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+    ],
+  },
   divider: {
     name: 'Divider',
     examples: [
@@ -210,6 +265,20 @@ export const registry = {
         path: 'components/examples/input-disable-example.tsx',
         component: React.lazy(() =>
           import('./examples/input-disable-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+    ],
+  },
+  radio: {
+    name: 'Radio',
+    examples: [
+      {
+        name: 'Basic',
+        path: 'components/examples/radio-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/radio-example').then((mod) => ({
             default: mod.default,
           })),
         ),

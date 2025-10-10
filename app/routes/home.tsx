@@ -1,47 +1,8 @@
 import type { Route } from './+types/home';
 import { codeToHtml } from 'shiki';
-import { Button } from 'components/selia/button';
-import {
-  Card,
-  CardBody,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardHeaderActions,
-  CardHeaderContent,
-  CardTitle,
-} from 'components/selia/card';
-import {
-  Field,
-  FieldDescription,
-  FieldError,
-  FieldLabel,
-} from 'components/selia/field';
 import { Code, Strong, Text, TextLink } from 'components/selia/text';
-import { Input } from 'components/selia/input';
-import {
-  ArrowRightCircle,
-  Building2Icon,
-  PlayIcon,
-  Settings2Icon,
-  Trash2Icon,
-  UserIcon,
-  Users2Icon,
-} from 'lucide-react';
 import { Fragment, useState } from 'react';
-import { Fieldset, FieldsetLegend } from 'components/selia/fieldset';
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectGroupLabel,
-  SelectItem,
-  SelectList,
-  SelectTrigger,
-  SelectValue,
-} from 'components/selia/select';
 import { Divider, DividerText } from 'components/selia/divider';
-import { Avatar, AvatarFallback, AvatarImage } from 'components/selia/avatar';
 import { Heading } from 'components/selia/heading';
 import { Preview } from 'components/preview';
 import { registry } from 'components/registry';
@@ -111,6 +72,28 @@ export default function Home({
           )}
 
           <Heading size="md" className="mb-4 mt-24">
+            Checkbox
+          </Heading>
+          {registry.checkbox.examples.map(
+            ({ name, component: Component, path }) => (
+              <Preview key={name} title={name} source={sources[path]}>
+                <Component />
+              </Preview>
+            ),
+          )}
+
+          <Heading size="md" className="mb-4 mt-24">
+            Checkbox Group
+          </Heading>
+          {registry.checkboxGroup.examples.map(
+            ({ name, component: Component, path }) => (
+              <Preview key={name} title={name} source={sources[path]}>
+                <Component />
+              </Preview>
+            ),
+          )}
+
+          <Heading size="md" className="mb-4 mt-24">
             Divider
           </Heading>
           {registry.divider.examples.map(
@@ -159,6 +142,17 @@ export default function Home({
             Input
           </Heading>
           {registry.input.examples.map(
+            ({ name, component: Component, path }) => (
+              <Preview key={name} title={name} source={sources[path]}>
+                <Component />
+              </Preview>
+            ),
+          )}
+
+          <Heading size="md" className="mb-4 mt-24">
+            Radio
+          </Heading>
+          {registry.radio.examples.map(
             ({ name, component: Component, path }) => (
               <Preview key={name} title={name} source={sources[path]}>
                 <Component />

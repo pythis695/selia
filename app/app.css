@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --surface00: #161718;
   --surface01: #1d1e20;
@@ -131,7 +133,6 @@
   --color-accent04: var(--accent04);
   --color-accent05: var(--accent05);
   --color-card: var(--card-background);
-  --color-card-foreground: var(--foreground);
   --color-card-border: var(--card-border);
   --background-image-gradient-card: var(--card-gradient);
   --color-input: var(--input-background);

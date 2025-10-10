@@ -2,10 +2,17 @@ import { useRender } from '@base-ui-components/react';
 import { cva } from 'class-variance-authority';
 import { cn } from 'lib/utils';
 
-export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {}
+export interface TextProps extends useRender.ComponentProps<'p'> {}
 
-export function Text({ className, ...props }: TextProps) {
-  return <p className={cn('text-muted text-base/6', className)} {...props} />;
+export function Text({ className, render, ...props }: TextProps) {
+  return useRender({
+    defaultTagName: 'p',
+    render,
+    props: {
+      className: cn('text-base/6 text-foreground', className),
+      ...props,
+    },
+  });
 }
 
 export interface TextLinkProps extends useRender.ComponentProps<'a'> {}
