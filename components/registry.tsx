@@ -1,6 +1,38 @@
 import React from 'react';
 
 export const registry = {
+  alert: {
+    name: 'Alert',
+    examples: [
+      {
+        name: 'Basic',
+        path: 'components/examples/alert-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/alert-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+      {
+        name: 'Light Variant',
+        path: 'components/examples/alert-light-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/alert-light-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+      {
+        name: 'Alert with Action',
+        path: 'components/examples/alert-action-example.tsx',
+        component: React.lazy(() =>
+          import('./examples/alert-action-example').then((mod) => ({
+            default: mod.default,
+          })),
+        ),
+      },
+    ],
+  },
   avatar: {
     name: 'Avatar',
     examples: [

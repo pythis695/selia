@@ -38,6 +38,18 @@ export default function Home({
             A beautiful component library for your React applications.
           </Text>
           <Divider className="my-6" />
+
+          <Heading size="md" className="mb-4">
+            Alerts
+          </Heading>
+          {registry.alert.examples.map(
+            ({ name, component: Component, path }) => (
+              <Preview key={name} title={name} source={sources[path]}>
+                <Component />
+              </Preview>
+            ),
+          )}
+
           <Heading size="md" className="mb-4">
             Avatars
           </Heading>

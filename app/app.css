@@ -119,6 +119,15 @@
   --color-invert-foreground: var(--invert-foreground);
   --color-invert-ring: var(--invert-ring);
   --background-image-gradient-invert: var(--gradient-invert);
+  --color-info: var(--info-background);
+  --color-info-foreground: var(--info-foreground);
+  --background-image-gradient-info: var(--gradient-info);
+  --color-success: var(--success-background);
+  --color-success-foreground: var(--success-foreground);
+  --background-image-gradient-success: var(--gradient-success);
+  --color-warning: var(--warning-background);
+  --color-warning-foreground: var(--warning-foreground);
+  --background-image-gradient-warning: var(--gradient-warning);
   --color-border: var(--border00);
   --color-border00: var(--border00);
   --color-border01: var(--border01);
